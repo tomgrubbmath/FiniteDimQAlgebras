@@ -22,6 +22,15 @@ hashFDQA FDQA := MutableHashTable => A -> (
 		H#s = Ak_j_i)));
     return H)
 
+FDQA == FDQA := (A,B) ->(
+   toList(A) == toList(B))
+
+FDQAElement == FDQAElement := (a,b) ->(
+    tempbool := true;
+    if a_0 != b_0 then tempbool = false
+    else if a_{1..#a-1}!=b_{1..#b-1} then tempbool = false;
+    return tempbool)
+
 fDQAElement = method()
 
 fDQAElement VisibleList := FDQAElement => H -> new FDQAElement from H
@@ -61,6 +70,45 @@ FDQAElement*FDQAElement := (a,b) ->(
 	    e = e+lFDQA));
     return e)
 
+
+minPoly = method()
+
+minPoly FDQAElement := RingElement => x ->(
+    R := QQ[X];
+    y := x;
+    tempbool := true;
+    l := {x_{1..#x-1}};
+    rankcounter := 1;
+    zeroes := for i from 1 to #x-1 list 0;
+    zeroes = prepend(x_0,zeroes);
+    M1 := matrix l;
+    M2 := matrix l;
+    if x == zeroes then return (gens R)_0
+    else(
+	while tempbool == true do(
+	    rankcounter = rankcounter+1;
+	    y = y*x;
+	    l = append(l,y_{1..#x-1});
+	    M1 = matrix l;
+	    if rank M1 != rankcounter then(
+		M2 = transpose M2;
+		Q := transpose matrix{y_{1..#x-1}};
+		S := solve(M2,Q);
+		polynomial:=(gens R)_0^(rankcounter-1);
+		for i from 0 to rankcounter-2 do(
+		    polynomial = polynomial - S_0_i*((gens R)_0)^i);
+		return polynomial)
+	    else M2 = M1)))
+	    
+
+	
+
+
+
+
+
+
+-----------------test code; easiest case I guess is just to work in Q[sqrt{2}]-------------------
 
 	    
 M = matrix{{1,0},{0,2}}
