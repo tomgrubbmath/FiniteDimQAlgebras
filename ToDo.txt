@@ -1,0 +1,33 @@
+Paper A == https://arxiv.org/pdf/1509.08843.pdf
+Paper B == https://arxiv.org/abs/1509.02612.pdf
+
+
+[X] Define FDQAs by asking for a list of matrices, the matrices encode the structure coefficients for multiplication 
+[X] Define FDQA elements. They are implemented as a list. THE FIRST ENTRY OF THE LIST IS THE ALGEBRA TO WHICH 
+    THE ELEMENT BELONGS. Entries 1-#a are the basis coefficients 
+[X] Define addition, multiplication, subtraction, and Qalgebra structure on FDQA elements 
+[] Figure out how linear algebra works in Macaulay2, including how linear independence works
+[] Paper A, Algorithm 5.1
+[] Paper A, Algorithm 5.5
+[] Paper A, Algorithm 6.3
+[] Paper A, Algorithm 7.2
+[] Paper A, Algorithm 7.3
+[] Paper A, Algorithm 8.3
+[] Paper A, Algorithm 8.4
+[] Paper B, Algorithm 3.2
+[] Paper B, Algorithm 3.4
+[] Paper B, Algorithm 3.6
+[] Paper B, Algorithm 4.2
+[] Paper B, Algorithm 5.6
+[] Paper B, Algorithm 6.1
+[] Paper B, Algorithm 7.3
+[] Paper B, Algorithm 7.5
+[] Paper B, Algorithm 7.6
+[] Paper B, Algorithm 7.8
+[] Paper B, Algirithm 10.2
+[] Paper B, Algorithm 10.7
+[] Paper B, Algorithm 11.3
+[] Paper B, Algorithm 12.2
+[] Paper B, Algorithm 13.1
+[] Paper B, Algorithm 13.2
+
