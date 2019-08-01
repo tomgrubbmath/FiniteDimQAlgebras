@@ -6,8 +6,8 @@ Paper B == https://arxiv.org/abs/1509.02612.pdf
 [X] Define FDQA elements. They are implemented as a list. THE FIRST ENTRY OF THE LIST IS THE ALGEBRA TO WHICH 
     THE ELEMENT BELONGS. Entries 1-#a are the basis coefficients 
 [X] Define addition, multiplication, subtraction, and Qalgebra structure on FDQA elements 
-[] Figure out how linear algebra works in Macaulay2, including how linear independence works
-[] Paper A, Algorithm 5.1
+[X] Figure out how linear algebra works in Macaulay2, including how linear independence works (use rank Matrix+solve function)
+[/] Paper A, Algorithm 5.1 Partially implemented; minpoly can be calculated, but still some loose ends.
 [] Paper A, Algorithm 5.5
 [] Paper A, Algorithm 6.3
 [] Paper A, Algorithm 7.2
